@@ -17,12 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Set up vcpkg (if vcpkg isn't set up in your repo, clone it)
-      - name: Set up vcpkg
-        run: |
-          git clone https://github.com/microsoft/vcpkg.git
-          .\vcpkg\bootstrap-vcpkg.bat
-
       # Install 7zip using vcpkg
       - name: Install 7zip with vcpkg
-        run: .\vcpkg\vcpkg install 7zip
+        shell: bash
+        run: |
+          vcpkg install 7zip
