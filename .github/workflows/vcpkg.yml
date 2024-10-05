@@ -16,5 +16,5 @@ jobs:
         shell: bash
         run: |
           git clone https://github.com/microsoft/vcpkg.git
-          .\vcpkg\bootstrap-vcpkg.bat
+          ./vcpkg/bootstrap-vcpkg.bat
           vcpkg install 7zip
