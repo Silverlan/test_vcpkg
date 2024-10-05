@@ -15,4 +15,6 @@ jobs:
       - name: Install 7zip with vcpkg
         shell: bash
         run: |
+          git clone https://github.com/microsoft/vcpkg.git
+          .\vcpkg\bootstrap-vcpkg.bat
           vcpkg install 7zip
